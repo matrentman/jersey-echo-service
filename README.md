@@ -1,0 +1,1 @@
+This is a very simple RESTful web service, implemented using Jersey, that receives JSON input and echoes it back in the response. 
