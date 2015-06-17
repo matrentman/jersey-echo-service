@@ -13,13 +13,13 @@ import javax.ws.rs.core.Response;
 @Path("/")
 public class EchoService
 {
-	@POST
+    @POST
     @Path("/echoService")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response echoService(InputStream jsonPayload)
-	{
-		int statusCode = 200;
-		String echoString = null;
+    {
+        int statusCode = 200;
+        String echoString = null;
 		
         StringBuilder sb = new StringBuilder();
         try 
@@ -30,7 +30,8 @@ public class EchoService
             {
                 sb.append(line);
             }
-        } catch (Exception e) 
+        }
+        catch (Exception e) 
         {
             System.out.println("Error Parsing JSON payload!");
             echoString = "The JSON payload could not be parsed!";
